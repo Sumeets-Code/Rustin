@@ -123,4 +123,4 @@ async function cancelOrder(orderId) {
     return await order.save();
 }
 
-export default { createOrder, findOrderById, userOrderHistory, cancelOrder, delivered, shippedOrder, placeOrder, deleteOrder, getAllOrders };
+export default { createOrder, findOrderById, userOrderHistory, cancelOrder, delivered, shippedOrder, placeOrder, deleteOrder, confirmed, getAllOrders };
