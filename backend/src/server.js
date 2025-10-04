@@ -5,8 +5,18 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import connectDb from '../config/mongodbConn.js';
 import connectPG from '../config/postgresConn.js';
+
 import authRoutes from '../routes/auth.route.js';
 import userRoutes from '../routes/user.route.js';
+import productRoutes from '../routes/product.route.js';
+import adminContoller from '../routes/adminContoller.route.js';
+import adminProducts from '../routes/adminProduct.route.js';
+import cartRoutes from '../routes/cart.route.js';
+import cartItemRoutes from '../routes/cartItem.route.js';
+import ratingRoutes from '../routes/rating.route.js';
+import reviewRoutes from '../routes/review.route.js';
+import orderRoutes from '../routes/order.route.js';
+
 
 const app = express();
 const PORT = 3000;
@@ -28,6 +38,14 @@ app.set('view engine', 'ejs');
 
 app.use( '/auth' , authRoutes, apiLimiter );
 app.use( '/api/users' , userRoutes );
+app.use( '/api/products', productRoutes );
+app.use( '/admin/orders', adminContoller );
+app.use( '/admin/products', adminProducts );
+app.use( '/api/cart', cartRoutes );
+app.use( '/api/cartItems', cartItemRoutes );
+app.use( '/api/orders', orderRoutes );
+app.use( '/api/reviews', reviewRoutes );
+app.use( '/api/ratings', ratingRoutes );
 
 app.get('/', (req, res) => {
     res.render("index.ejs");

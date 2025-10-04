@@ -9,6 +9,15 @@ const getAllOrders = async (req, res) => {
     }
 }
 
+const shipOrder = async (req, res) => {
+    const orderId = req.body.orderId;
+    try {
+        const orders = await orderService.shippedOrder(orderId);
+        return res.status(200).send(orders);
+    } catch (err) {
+        return res.status(500).send({error: err.message});
+    }
+}
 
 const confirmedOrder = async (req, res) => {
     const orderId = req.params.orderId;
@@ -50,4 +59,4 @@ const deleteOrder = async (req, res) => {
     }
 }
 
-export default { getAllOrders, confirmedOrder, deleteOrder, deliveredOrder, cancelOrder }
+export default { getAllOrders, confirmedOrder, deleteOrder, deliveredOrder, cancelOrder, shipOrder }

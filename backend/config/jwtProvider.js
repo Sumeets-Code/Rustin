@@ -56,4 +56,4 @@ const getIdByToken = (token) => {
     }
 }
 
-export { generateToken, getIdByToken };
+export default { generateToken, getIdByToken };
