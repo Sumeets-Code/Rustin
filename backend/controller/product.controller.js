@@ -1,4 +1,4 @@
-import productService from "../services/product.service"
+import productService from "../services/product.service.js"
 
 const createProduct = async (req, res) => {
     try {
@@ -40,7 +40,6 @@ const findProductById = async (req, res) => {
 }
 
 const getAllProducts = async (req, res) => {
-    const productId = req.params.id;
     try {
         const products = await productService.getAllProducts(req.query);
         return res.status(200).send(products);

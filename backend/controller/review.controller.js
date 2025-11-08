@@ -1,4 +1,4 @@
-import reviewService from "../services/review.service";
+import reviewService from "../services/review.service.js";
 
 
 const createReview = async (req, res) => {

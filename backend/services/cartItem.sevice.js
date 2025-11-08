@@ -1,5 +1,5 @@
-import CartItems from "../models/cartItems.model";
-import userService from "./user.service";
+import CartItems from "../models/cartItems.model.js";
+import userService from "./user.service.js";
 
 
 async function updateCartItem(userId, cartItemId, cartItemData) {

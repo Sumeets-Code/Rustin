@@ -1,6 +1,6 @@
 import User from '../models/user.model.js';
 import bcrypt from 'bcrypt';
-import { getIdByToken } from '../config/jwtProvider.js';
+import jwtProvider from '../config/jwtProvider.js';
 
 const createUser = async(userData) => {
     try {        
@@ -58,7 +58,7 @@ const findUserByEmail = async(userEmail)=> {
 
 const getProfileByToken = async(token)=> {
     try {
-        const userId = getIdByToken(token);
+        const userId = jwtProvider.getIdByToken(token);
         console.log(userId);
 
         const user = await findUserById(userId);

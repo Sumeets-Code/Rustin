@@ -1,4 +1,4 @@
-import cartService from "../services/cart.service";
+import cartService from "../services/cart.service.js";
 
 const findUserCart = async (req, res) => {
     const user = req.user;

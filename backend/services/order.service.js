@@ -1,7 +1,7 @@
-import Address from "../models/address.model";
-import Orders from "../models/order.model";
-import OrderItem from "../models/orderItems.model";
-import cartService from "./cart.service";
+import Address from "../models/address.model.js";
+import Orders from "../models/order.model.js";
+import OrderItem from "../models/orderItems.model.js";
+import cartService from "./cart.service.js";
 
 
 

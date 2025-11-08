@@ -1,6 +1,6 @@
 import express from 'express';
-import authenticate from '../middleware/authenticate';
-import reviewController from '../controller/review.controller';
+import authenticate from '../middleware/authenticate.js';
+import reviewController from '../controller/review.controller.js';
 
 const router = express.Router();
 

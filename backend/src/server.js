@@ -60,4 +60,4 @@ app.listen(PORT, async() => {
     await connectDb();
     await connectPG();
     console.log(`Server running at port ${PORT} visit: https://localhost:${PORT} `);
-})  
+})   

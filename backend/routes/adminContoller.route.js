@@ -1,7 +1,7 @@
 import express from 'express';
-import orderController from '../controller/order.controller';
-import authenticate from '../middleware/authenticate';
-import adminOrderController from '../controller/adminOrder.controller';
+import orderController from '../controller/order.controller.js';
+import authenticate from '../middleware/authenticate.js';
+import adminOrderController from '../controller/adminOrder.controller.js';
 
 const router = express.Router();
 
